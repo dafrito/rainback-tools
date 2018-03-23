@@ -1,7 +1,7 @@
 #!/bin/bash
 
 test -e clean-everything.sh || ln -s tools/clean-everything.sh
-test -e deploy-everything.sh || ln -s tools/deploy-everything.sh
+test -e deploy-parsegraph26.sh || ln -s tools/deploy-parsegraph26.sh
 test -e rebuild-everything.sh || ln -s tools/rebuild-everything.sh
 mkdir -p public_html rpm
 test -d mod_rainback || git clone https://github.com/dafrito/mod_rainback
