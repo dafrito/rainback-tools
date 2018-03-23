@@ -12,6 +12,5 @@ cd graph-js && autoreconf -i && cd ..
 test -d libparsegraph || git clone https://github.com/dafrito/libparsegraph
 cd libparsegraph && autoreconf -i && cd ..
 test -d marla || git clone https://github.com/dafrito/marla-server marla
-cd marla && autoreconf -i && cd ..
 test -d server || git clone https://github.com/dafrito/rainback-server-httpd server
 cd server && make && cd ..
