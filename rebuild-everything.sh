@@ -1,12 +1,12 @@
 #!/bin/bash
 
-for d in libparsegraph_user libparsegraph_list libparsegraph_environment; do
+for d in libparsegraph; do
     pushd $d || exit
     make clean && make && make install && make check || exit
     popd
 done
 
-for d in doc graph-js mod_rainback mod_environment_ws; do
+for d in doc graph-js mod_rainback; do
     pushd $d || exit
     make clean || exit
     make || exit
@@ -14,13 +14,13 @@ for d in doc graph-js mod_rainback mod_environment_ws; do
     popd || exit
 done
 
-for d in libparsegraph_user libparsegraph_list libparsegraph_environment; do
+for d in libparsegraph; do
     pushd $d || exit
     make rpm || exit
     popd
 done
 
-for d in doc graph-js mod_rainback mod_environment_ws; do
+for d in doc graph-js mod_rainback; do
     pushd $d || exit
     make rpm || exit
     popd || exit
