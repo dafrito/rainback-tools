@@ -1,1 +1,1 @@
-dnf install openssl-devel httpd-devel
+dnf install openssl-devel httpd-devel automake autoconf libtool
