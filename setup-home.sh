@@ -7,12 +7,12 @@ mkdir -p ~/include
 CHANGED=0
 
 add_pkg_config() {
-    echo 'PKG_CONFIG_PATH=$HOME/lib/pkgconfig' >>~/.bash_profile;
+    echo 'export PKG_CONFIG_PATH=$HOME/lib/pkgconfig' >>~/.bash_profile;
     CHANGED=1
 }
 
 add_library_path() {
-    echo 'LD_LIBRARY_PATH=$HOME/lib' >>~/.bash_profile;
+    echo 'export LD_LIBRARY_PATH=$HOME/lib' >>~/.bash_profile;
     CHANGED=1
 }
 
