@@ -1,5 +1,6 @@
 #!/bin/bash
 
+mkdir -p ~/bin
 mkdir -p ~/tmp
 mkdir -p ~/lib/pkgconfig
 mkdir -p ~/include
