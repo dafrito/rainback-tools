@@ -1,27 +1,21 @@
 #!/bin/bash
 
-pushd marla
-make kill
-make clean
-pop
+for d in libparsegraph; do
+    pushd $d || exit
+    make clean || exit
+    popd
+done
+
+for d in doc graph-js mod_rainback; do
+    pushd $d || exit
+    make clean || exit
+    popd || exit
+done
 
 pushd server
-make kill
-make clean
+make clean || exit
 popd
 
-for d in libparsegraph_user libparsegraph_list libparsegraph_environment; do
-    pushd $d
-    #make clean && make && make install && make check
-    make clean
-    popd
-done
-
-for d in doc graph-js mod_rainback mod_environment_ws; do
-    pushd $d
-    make clean || exit
-    #make || exit
-    #./deploy.sh || exit
-    popd
-done
-
+pushd marla
+make clean || exit
+popd
